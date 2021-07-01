@@ -13,9 +13,13 @@
 - name: Install Snap Packages
   snap: name={{item}}
   with_items:
-    - "{ --classic code }"
     - "{ starship }"
     - "{ discord }"
 
-
+- name: Install CLASSIC Snap Packages
+  snap: 
+    name={{item}}
+    classic: yes
+  with_items:
+    - "{ code }"
 
