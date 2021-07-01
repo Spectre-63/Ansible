@@ -1,24 +1,21 @@
-- hosts: localhost
-  become: true
-  tasks:
-   - name: Install Apt Packages
-      apt: name-{{item}}
-      with_items:
-        - {{ snapd }}
-        - {{ remmina }}
-        - {{ vim }}
-        - {{ wget }}
-        - {{ git }}
-        - {{ zsh }}
-        - {{ preload}}
+- name: Install Apt Packages
+  apt: name-{{item}}
+  with_items:
+    - {{ snapd }}
+    - {{ remmina }}
+    - {{ vim }}
+    - {{ wget }}
+    - {{ git }}
+    - {{ zsh }}
+    - {{ preload}}
 
-    - name: Install Snap Packages
-      snap: name={{item}}
-      with_items:
-        - {{ code --classic }}
-        - {{ starship }}
-        - {{ discord }}
-        - {{ htop }}
+- name: Install Snap Packages
+  snap: name={{item}}
+  with_items:
+    - {{ code --classic }}
+    - {{ starship }}
+    - {{ discord }}
+    - {{ htop }}
 
 
 
