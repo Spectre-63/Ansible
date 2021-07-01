@@ -16,9 +16,8 @@
     - "{ starship }"
     - "{ discord }"
 
-- name: Install CLASSIC Snap Packages
-  snap: name={{item}}
+- name: Install CLASSIC Snap Packages  ## classic can ONLY be specified for individual packages - lists cannot be used :(
+  snap: 
+    name: code
     classic: yes
-  with_items:
-    - "{ code }"
 
