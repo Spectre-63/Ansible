@@ -8,14 +8,14 @@
     - "{ git }"
     - "{ zsh }"
     - "{ preload }"
+    - "{ htop }"
 
 - name: Install Snap Packages
   snap: name={{item}}
   with_items:
-    - "{ code --classic }"
+    - "{ --classic code }"
     - "{ starship }"
     - "{ discord }"
-    - "{ htop }"
 
 
 
